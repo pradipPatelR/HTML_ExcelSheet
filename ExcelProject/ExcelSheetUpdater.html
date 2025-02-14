@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Excel Viewer & Editor</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+        <link rel="stylesheet" href="styles.css">       <!-- Linking external CSS file -->
+    </head>
+    <body>
+        <h2>Excel File Browse Data</h2>
+        
+        <input type="file" id="uploadExcel" />
+        <label for="search">Search by Coloum: </label>
+        <select name="search" id="search">
+            <option value="Select" id="">Select</option>
+        </select>
+        <input type="text" id="searchInput" placeholder="Search data..." onkeyup="searchTable()" />
+        <span style="margin-left: 50px;" />
+        <button onclick="openStateDistrictMap()">State & District Search By</button>
+        <span style="margin-left: 10px;" />
+        <label for="search_State_District">
+            <label id="stateNameId" onclick="loadIndiaMapAgain()">None</label>
+            <label id="arrowId">-></label>
+            <label id="districtNameId">None</label>
+        </label>
+        <button onclick="saveExcel()" style="float: right;">Save Updated File</button>
+        <br/>
+            <div class="image-container" id="image-container" style="display: none;"></div>
+        <br/>
+            <table id="excelTable" border="1"></table>
+            
+        <script src="Excel_Filter.js"></script>
+        <script src="StateDistrict.js"></script>
+
+    </body>
+</html>
