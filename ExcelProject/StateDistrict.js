@@ -120,7 +120,7 @@ const coordsStateValue = [
 ]
 
 
-async function readJsonData() {
+function readJsonData() {
     //statesOfIndia.json
 
 }
